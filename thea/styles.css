@@ -1,0 +1,336 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    size: 80px;
+}
+
+.navbar img {
+    height: 100px;
+    margin-right: 10px;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin-right: 80px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+
+}
+
+.hero {
+    background: url('img/vladyslav-tobolenko-09hNcRBNfFs-unsplash.jpg') no-repeat center center/cover;
+    height: 100vh;
+    position: relative;
+}
+
+.hero .overlay {
+    background: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/*carrusel*/
+
+.carousel {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 2s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    /* 👈 forzamos columna */
+
+    /* centrado del bloque slide-content */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.slide-content {
+    display: flex;
+    /* organizamos en columna */
+    flex-direction: column;
+    align-items: center;
+    /* centrado horizontal */
+    justify-content: center;
+    /* centrado vertical dentro del bloque */
+    text-align: center;
+    color: white;
+    z-index: 2;
+    max-width: 80%;
+    /* evita que el texto largo se extienda demasiado */
+    line-height: 1.4;
+    /* mejora legibilidad */
+}
+
+.slide h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    /* asegura espacio debajo del título */
+        opacity: 1;       /* aseguramos que no se vea grisáceo */
+
+}
+
+.slide p {
+    font-size: 1.5rem;
+    color: white;
+        opacity: 1;       /* aseguramos que no se vea grisáceo */
+    color: #ffffff;   /* blanco puro */
+
+}
+
+
+/*servicios*/
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 70vh;
+}
+
+.service-card {
+    flex: 1;
+    padding: 40px;
+    background: url('img/anders-jilden-Sc5RKXLBjGg-unsplash.jpg') no-repeat center center/cover;
+}
+
+
+.service-card.img2 {
+    background: url('img/taylor-vick-osGYMaqiaR8-unsplash.jpg') no-repeat center center/cover;
+}
+
+.service-card.img3 {
+    background: url('img/francesca-tosolini-tHkJAMcO3QE-unsplash.jpg') no-repeat center center/cover;
+}
+
+.service-card a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/*franja*/
+.stats-section {
+    background: #f5f5f5;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.stats-section .container {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    flex-wrap: wrap;
+}
+
+.stat {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 150px;
+}
+
+.stat .number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #808080;
+    display: block;
+}
+
+.stat p {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.number::before {
+    content: "+";
+    margin-left: 2px;
+    color: #808080;
+}
+
+/* Sobre Nosotros*/
+.about-section {
+    padding: 80px 20px;
+    background: #f9f9f9;
+}
+
+.about-section .container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* Para que sea responsiva */
+}
+
+.about-image,
+.about-text {
+    flex: 1 1 50%;
+    /* Cada uno ocupa el 50% */
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    color: #505050;
+    margin-bottom: 10px;
+}
+
+.about-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #505050;
+    margin-bottom: 15px;
+}
+
+/* Responsivo: en móviles la imagen y texto se apilan */
+@media screen and (max-width: 768px) {
+    .about-section .container {
+        flex-direction: column;
+    }
+
+    .about-image,
+    .about-text {
+        flex: 1 1 100%;
+        padding: 10px;
+    }
+}
+
+/*footer*/
+.footer {
+    background: #111;
+    color: #fff;
+    padding: 60px 20px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-col {
+    flex: 1 1 250px;
+    margin: 15px;
+}
+
+.footer-col h2 {
+    font-size: 1.8rem;
+    color: #d4d4d4;
+    margin-bottom: 15px;
+}
+
+.footer-col h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.footer-col p {
+    color: #bbb;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin: 8px 0;
+}
+
+.footer-col ul li a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: #dddddd;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 1.3rem;
+    color: #bbb;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #bbbbbb;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #333;
+    margin-top: 30px;
+    padding-top: 15px;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* Responsivo */
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-links {
+        margin-top: 10px;
+    }
+}
