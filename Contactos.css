@@ -1,0 +1,232 @@
+/* ======= ESTILOS GENERALES ======= */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    size: 80px;
+}
+
+.navbar img {
+    height: 100px;
+    margin-right: 10px;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin-right: 80px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+
+}
+
+/* ======= HERO ======= */
+.contacto-hero {
+  position: relative;
+  background: url("img/logo\ blanco\ grupoterra-05.png") center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  background-color: rgba(96, 139, 43, 0.2);
+  background-blend-mode: multiply;
+  z-index: 1;
+}
+
+.contacto-hero .overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+}
+
+/* ======= INFO CONTACTO ======= */
+.info-contacto {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+  padding: 80px 10%;
+  text-align: center;
+  background-color: #fff;
+}
+
+.contact-card {
+  background: #f5f5f5;
+  border-radius: 15px;
+  padding: 25px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.contact-card h3 {
+  color: #2c6e49;
+}
+
+/* ======= MAPA ======= */
+.mapa {
+  text-align: center;
+  padding: 60px 10%;
+}
+
+.mapa h2 {
+  margin-bottom: 20px;
+  color: #2c6e49;
+}
+
+/* ======= FORMULARIO ======= */
+.form-section {
+  background-color: #fff;
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.form-section h2 {
+  color: #2c6e49;
+}
+
+.form-section p {
+  margin-bottom: 40px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #2c6e49;
+  box-shadow: 0 0 5px rgba(44,110,73,0.3);
+}
+
+.btn-enviar {
+  background-color: #2c6e49;
+  color: #fff;
+  border: none;
+  padding: 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-enviar:hover {
+  background-color: #3b8554;
+  transform: translateY(-3px);
+}
+
+/* ======= REDES SOCIALES ======= */
+.redes-sociales {
+  background-color: #f5f5f5;
+  text-align: center;
+  padding: 70px 10%;
+}
+
+.redes-sociales h2 {
+  color: #2c6e49;
+  margin-bottom: 25px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.social {
+  text-decoration: none;
+  background-color: #2c6e49;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 25px;
+  transition: all 0.3s;
+}
+
+.social:hover {
+  background-color: #3b8554;
+  transform: translateY(-2px);
+}
+
+/* ======= FOOTER ======= */
+.footer {
+  background-color: #2c6e49;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+/* ===== BOTÓN FLOTANTE DE CONTACTO ===== */
+.btn-contacto-flotante {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: #3a7a58;
+  color: #fff;
+  padding: 14px 22px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  z-index: 1500;
+}
+
+.btn-contacto-flotante:hover {
+  background-color: #2f6347;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}

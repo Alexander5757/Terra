@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thea Herrajes y Accesorios</title>
+  <link rel="stylesheet" href="TheaHerraje.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">
+          <img src="img/logo blanco grupoterra-05.png" alt="Grupo Terra EC">
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="TerraArquitectos.html">Terra Arquitectos</a></li>
+        <li><a href="TheaHerraje.html" class="activo">Thea Herrajes y Accesorios</a></li>
+        <li><a href="TerraInmoviliaria.html">Terra Inmobiliaria</a></li>
+        <li><a href="Contactos.html">Contacto</a></li>
+      </ul>
+      <div class="cart-icon" onclick="toggleCart()">
+        🛒 <span id="cart-count">0</span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Diseño, Estilo y Funcionalidad</h1>
+      <p>Encuentra herrajes y accesorios de alta calidad para tus proyectos.</p>
+    </div>
+  </section>
+
+  <!-- CATÁLOGO -->
+  <section class="catalogo">
+    <h2>Catálogo de Productos</h2>
+    <div class="productos">
+
+      <div class="producto">
+        <img src="img/Herrajes/alex-tyson-I6L8Y63PLJs-unsplash.jpg" alt="Manija Acero Inoxidable">
+        <h3>Manija Acero Inoxidable</h3>
+        <p>Elegante y duradera, ideal para puertas modernas.</p>
+        <span class="precio">$18.50</span>
+        <button onclick="agregarAlCarrito('Manija Acero Inoxidable', 18.50)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="img/Herrajes/angus-chang-Cu9GtEY-nas-unsplash.jpg" alt="Manija Acero Inoxidable">
+        <h3>Manija Acero Inoxidable</h3>
+        <p>Elegante y duradera, ideal para puertas modernas.</p>
+        <span class="precio">$18.50</span>
+        <button onclick="agregarAlCarrito('Manija Acero Inoxidable', 18.50)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="img/Herrajes/barbara-burgess-v9jraQ0tM9A-unsplash.jpg" alt="Manija Acero Inoxidable">
+        <h3>Manija Acero Inoxidable</h3>
+        <p>Elegante y duradera, ideal para puertas modernas.</p>
+        <span class="precio">$18.50</span>
+        <button onclick="agregarAlCarrito('Manija Acero Inoxidable', 18.50)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="img/Herrajes/dada_design-zYMyL_QSSE8-unsplash.jpg" alt="Manija Acero Inoxidable">
+        <h3>Manija Acero Inoxidable</h3>
+        <p>Elegante y duradera, ideal para puertas modernas.</p>
+        <span class="precio">$18.50</span>
+        <button onclick="agregarAlCarrito('Manija Acero Inoxidable', 18.50)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="img/Herrajes/dominik-ju42_XSpnYg-unsplash.jpg" alt="Manija Acero Inoxidable">
+        <h3>Manija Acero Inoxidable</h3>
+        <p>Elegante y duradera, ideal para puertas modernas.</p>
+        <span class="precio">$18.50</span>
+        <button onclick="agregarAlCarrito('Manija Acero Inoxidable', 18.50)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="img/Herrajes/he-shiyuan-G6MAHuhHQWs-unsplash.jpg" alt="Manija Acero Inoxidable">
+        <h3>Manija Acero Inoxidable</h3>
+        <p>Elegante y duradera, ideal para puertas modernas.</p>
+        <span class="precio">$18.50</span>
+        <button onclick="agregarAlCarrito('Manija Acero Inoxidable', 18.50)">Agregar al carrito</button>
+      </div>
+
+      <div class="producto">
+        <img src="img/Herrajes/nicole-queiroz-nOLKRK6uuGA-unsplash.jpg" alt="Bisagra Oculta Premium">
+        <h3>Bisagra Oculta Premium</h3>
+        <p>Bisagra de alta resistencia con cierre suave y silencioso.</p>
+        <span class="precio">$9.90</span>
+        <button onclick="agregarAlCarrito('Bisagra Oculta Premium', 9.90)">Agregar al carrito</button>
+      </div>
+
+      <div class="producto">
+        <img src="img/Herrajes/pedro-fleitas-qeP5kIUj3B8-unsplash.jpg" alt="Tirador Minimalista Negro Mate">
+        <h3>Tirador Minimalista Negro Mate</h3>
+        <p>Perfecto para cocinas y closets contemporáneos.</p>
+        <span class="precio">$12.75</span>
+        <button onclick="agregarAlCarrito('Tirador Minimalista Negro Mate', 12.75)">Agregar al carrito</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CARRITO -->
+
+  <div class="carrito" id="carrito">
+    <h3>Tu Carrito</h3>
+    <ul id="lista-carrito"></ul>
+    <div class="carrito-footer">
+      <p>Total: $<span id="total">0.00</span></p>
+      <button onclick="procederPago()">Proceder al pago</button>
+      <button class="cerrar" onclick="toggleCart()">Cerrar</button>
+    </div>
+  </div>
+
+  <!-- SECCIÓN DE PAGO -->
+  <section class="pago" id="pago" style="display:none;">
+    <h2>Finalizar Compra</h2>
+    <form id="form-pago">
+      <label>Nombre completo:</label>
+      <input type="text" required>
+
+      <label>Correo electrónico:</label>
+      <input type="email" required>
+
+      <label>Método de pago:</label>
+      <select required>
+        <option value="">Selecciona una opción</option>
+        <option>Transferencia bancaria</option>
+        <option>Tarjeta de crédito</option>
+        <option>PayPal</option>
+      </select>
+
+      <button type="submit">Confirmar pago</button>
+    </form>
+  </section>
+  <a href="https://wa.me/593991234567" target="_blank" class="btn-contacto-flotante">
+    💬 Contáctanos
+  </a>
+
+  <footer>
+    <p>&copy; 2025 Thea Herrajes y Accesorios. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="Herraje.js"></script>
+</body>
+
+</html>
